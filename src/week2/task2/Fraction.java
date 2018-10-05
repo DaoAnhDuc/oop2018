@@ -27,12 +27,12 @@ public class Fraction {
         this.denominator = denominator;
         this.numerator = numerator;
 
-        // TODO: khởi tạo giá trị cho các thuộc tính    numberator (tử số), denominator (mẫu số)
+        // TODO: khởi tạo giá trị cho các thuộc tính    numerator (tử số), denominator (mẫu số)
     }
 
     public Fraction add(Fraction other) {
-        Fraction result = Fraction(0,1);
-        result.numberator = this.numberator*other.denominator + other.numberator*this.denominator;
+        Fraction result = new Fraction(0,1);
+        result.numerator = this.numerator*other.denominator + other.numerator*this.denominator;
         result.denominator = this.denominator*other.denominator;
         return result;
     }
@@ -41,8 +41,8 @@ public class Fraction {
 
 
     public Fraction subtract(Fraction other) {
-        Fraction result = Fraction(0,1);
-        result.numberator = this.numberator*other.denominator - other.numberator*this.denominator;
+        Fraction result = new Fraction(0,1);
+        result.numerator = this.numerator*other.denominator - other.numerator*this.denominator;
         result.denominator = this.denominator*other.denominator;
         return result;
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
@@ -50,8 +50,8 @@ public class Fraction {
     }
 
     public Fraction multiply(Fraction other) {
-        Fraction result = Fraction(0,1);
-        result.numberator = this.numberator * other.denominator ;
+        Fraction result = new Fraction(0,1);
+        result.numerator = this.numerator * other.denominator ;
         result.denominator = this.denominator * other.denominator;
         return result;
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
@@ -59,8 +59,8 @@ public class Fraction {
     }
 
     public Fraction divide(Fraction other) {
-        Fraction result = Fraction(0, 1)
-        result.numberator = this.numberator * other.denominator;
+        Fraction result = new Fraction(0, 1);
+        result.numerator = this.numerator * other.denominator;
         result.denominator = this.denominator * other.numerator;
         return result;
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới}
@@ -77,4 +77,6 @@ public class Fraction {
             return false;
         }
     }
+
+
 }
